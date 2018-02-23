@@ -1,0 +1,46 @@
+﻿body {
+    background-color: rgb(54,64,74);
+}
+
+p {
+    color: rgb(152,166,173);
+}
+
+h1 {
+    color: rgb(152,166,173);
+}
+
+h2 {
+    color: rgb(152,166,173);
+}
+
+h3 {
+    color: rgb(152,166,173);
+}
+
+h4 {
+    color: rgb(152,166,173);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(106,168,79);
+}
+
+button {
+    color: rgb(219,24,46);
+    border: none;
+    padding: 0px;
+    background-color: rgb(54,64,74);
+    cursor: pointer;
+    position: relative;
+    top: -15px;
+}
+
+.update {
+    font-size: 20px;
+}
+
+#create {
+    font-size: 25px;
+}

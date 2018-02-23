@@ -1,0 +1,27 @@
+﻿@{     
+Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>
+            Create game
+        </h2>
+        @using (Html.BeginForm("CreateGame", "Home", FormMethod.Post))
+        {
+            <input type="text" name="title" placeholder="Title" />
+            <input type="date" name="releaseDate" />
+            <input type="text" name="genre" placeholder="Genre" />
+            <textarea name="description" placeholder="Description"></textarea>
+            <input type="number" name="rating" min="1" max="5" step="1" />
+            <button type="submit">Submit game</button>
+        }
+    </div>
+</body>
+</html>

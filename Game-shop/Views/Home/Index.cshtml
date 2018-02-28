@@ -22,7 +22,7 @@
         <p>@game.Description</p>
         <p>Realease date: @game.ReleaseDate.ToString("dd.MM.yyyy")</p>
 
-    using (Html.BeginForm("Delete Game", "Home", FormMethod.Post))
+    using (Html.BeginForm("DeleteGame", "Home", FormMethod.Post))
     {
         <input type="hidden" name="id" value="@game.Id" />
         <button onclick="return confirm('Do you want to remove this?')" type="submit">Delete movie</button>
@@ -30,6 +30,6 @@
 }
 
     </div>
-    <a href="/Home/CreateMovie">Create new Game</a>
+    <a href="/Home/CreateGame">Create new Game</a>
 </body>
 </html>

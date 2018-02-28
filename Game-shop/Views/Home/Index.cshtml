@@ -1,0 +1,35 @@
+﻿@model Game_shop.Models.Home
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>List of Games</h2>
+        @foreach (var game in Model.ListofGames.OrderByDescending(Game_shop => Game_shop.Rating))
+    {
+        <h3>@game.Title</h3>
+        <a class="update" href="/Home/UpdateGame?id=@game.Id">Update game</a>
+        <p>Rating: @game.Rating</p>
+        <p>Genre: @game.Genre</p>
+        <h4>Description</h4>
+        <p>@game.Description</p>
+        <p>Realease date: @game.ReleaseDate.ToString("dd.MM.yyyy")</p>
+
+    using (Html.BeginForm("DeleteGame", "Home", FormMethod.Post))
+    {
+        <input type="hidden" name="id" value="@game.Id" />
+        <button onclick="return confirm('Do you want to remove this?')" type="submit">Delete movie</button>
+}
+}
+
+    </div>
+    <a href="/Home/CreateGame">Create new Game</a>
+</body>
+</html>
